@@ -6,19 +6,79 @@
 //
 
 import UIKit
+import sbm_library_ios
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        // Create window and initial setup
+        let window = UIWindow(windowScene: windowScene)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let navigationController = UINavigationController()
+        
+        // Check for deep link
+        for urlContext in connectionOptions.urlContexts {
+            let url = urlContext.url
+            let host = url.host
+            
+            if host == "home" {
+                if let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
+                    navigationController.setViewControllers([homeVC], animated: false)
+                    window.rootViewController = navigationController
+                    self.window = window
+                    window.makeKeyAndVisible()
+                    return
+                }
+            }
+        }
+        
+        // Default flow - no deep link
+        if let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
+            navigationController.setViewControllers([loginVC], animated: false)
+            window.rootViewController = navigationController
+            self.window = window
+            window.makeKeyAndVisible()
+            
+            // Initialize Partner Library
+            PartnerLibrarySingleton.shared.initialize(
+                withHostName: EnvManager.partnerHostName,
+                deviceBindingEnabled: false,
+                whitelistedUrls: ["api.razorpay.com", "sbmkycuat.esbeeyem.com", "m2pfintech.com"]
+            )
+            
+            // Set navigation controller for Partner Library
+            PartnerLibrarySingleton.shared.instance.setParentNavigationController(navigationController)
+        }
     }
+    
+    // Handle deep links when app is already running
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let url = URLContexts.first?.url else { return }
+        print("Deep link received: \(url)")
+        
+        let host = url.host
+        if host == "home" {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController,
+               let navigationController = window?.rootViewController as? UINavigationController {
+                DispatchQueue.main.async {
+                    navigationController.setViewControllers([homeVC], animated: true)
+                }
+            }
+        }
+    }
+}
 
+// URL extension for query parameters
+extension URL {
+    func getQueryStringParameter(param: String) -> String? {
+        guard let url = URLComponents(string: self.absoluteString) else { return nil }
+        return url.queryItems?.first(where: { $0.name == param })?.value
+    }
+}
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
@@ -48,5 +108,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 
-}
+
 

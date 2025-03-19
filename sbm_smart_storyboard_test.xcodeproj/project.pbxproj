@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AAF864B22D8B18DC00BFF493 /* sbm-library-ios in Frameworks */ = {isa = PBXBuildFile; productRef = AAF864B12D8B18DC00BFF493 /* sbm-library-ios */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		AAB68DCE2D8A9EA10054F973 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF864B22D8B18DC00BFF493 /* sbm-library-ios in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,12 +90,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AAADA4BB2D8AB47200E09CC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AAB68DAE2D8A9E9F0054F973 = {
 			isa = PBXGroup;
 			children = (
 				AAB68DB92D8A9E9F0054F973 /* sbm_smart_storyboard_test */,
 				AAB68DD02D8A9EA10054F973 /* sbm_smart_storyboard_testTests */,
 				AAB68DDA2D8A9EA10054F973 /* sbm_smart_storyboard_testUITests */,
+				AAADA4BB2D8AB47200E09CC2 /* Frameworks */,
 				AAB68DB82D8A9E9F0054F973 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,6 +138,7 @@
 			);
 			name = sbm_smart_storyboard_test;
 			packageProductDependencies = (
+				AAF864B12D8B18DC00BFF493 /* sbm-library-ios */,
 			);
 			productName = sbm_smart_storyboard_test;
 			productReference = AAB68DB72D8A9E9F0054F973 /* sbm_smart_storyboard_test.app */;
@@ -208,6 +222,9 @@
 			);
 			mainGroup = AAB68DAE2D8A9E9F0054F973;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				AAF864B02D8B18DC00BFF493 /* XCLocalSwiftPackageReference "../../StudioProjects/sbm-library-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AAB68DB82D8A9E9F0054F973 /* Products */;
 			projectDirPath = "";
@@ -563,6 +580,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		AAF864B02D8B18DC00BFF493 /* XCLocalSwiftPackageReference "../../StudioProjects/sbm-library-ios" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../StudioProjects/sbm-library-ios";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AAF864B12D8B18DC00BFF493 /* sbm-library-ios */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "sbm-library-ios";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AAB68DAF2D8A9E9F0054F973 /* Project object */;
 }
