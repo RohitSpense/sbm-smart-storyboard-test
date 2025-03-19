@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		AAB68DCE2D8A9EA10054F973 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAB68DAF2D8A9E9F0054F973 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAB68DB62D8A9E9F0054F973;
+			remoteInfo = sbm_smart_storyboard_test;
+		};
+		AAB68DD82D8A9EA10054F973 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAB68DAF2D8A9E9F0054F973 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAB68DB62D8A9E9F0054F973;
+			remoteInfo = sbm_smart_storyboard_test;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AAB68DB72D8A9E9F0054F973 /* sbm_smart_storyboard_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sbm_smart_storyboard_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAB68DCD2D8A9EA10054F973 /* sbm_smart_storyboard_testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sbm_smart_storyboard_testTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAB68DD72D8A9EA10054F973 /* sbm_smart_storyboard_testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sbm_smart_storyboard_testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		AAB68DDF2D8A9EA10054F973 /* Exceptions for "sbm_smart_storyboard_test" folder in "sbm_smart_storyboard_test" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = AAB68DB62D8A9E9F0054F973 /* sbm_smart_storyboard_test */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		AAB68DB92D8A9E9F0054F973 /* sbm_smart_storyboard_test */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AAB68DDF2D8A9EA10054F973 /* Exceptions for "sbm_smart_storyboard_test" folder in "sbm_smart_storyboard_test" target */,
+			);
+			path = sbm_smart_storyboard_test;
+			sourceTree = "<group>";
+		};
+		AAB68DD02D8A9EA10054F973 /* sbm_smart_storyboard_testTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = sbm_smart_storyboard_testTests;
+			sourceTree = "<group>";
+		};
+		AAB68DDA2D8A9EA10054F973 /* sbm_smart_storyboard_testUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = sbm_smart_storyboard_testUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAB68DB42D8A9E9F0054F973 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAB68DCA2D8A9EA10054F973 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAB68DD42D8A9EA10054F973 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAB68DAE2D8A9E9F0054F973 = {
+			isa = PBXGroup;
+			children = (
+				AAB68DB92D8A9E9F0054F973 /* sbm_smart_storyboard_test */,
+				AAB68DD02D8A9EA10054F973 /* sbm_smart_storyboard_testTests */,
+				AAB68DDA2D8A9EA10054F973 /* sbm_smart_storyboard_testUITests */,
+				AAB68DB82D8A9E9F0054F973 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAB68DB82D8A9E9F0054F973 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAB68DB72D8A9E9F0054F973 /* sbm_smart_storyboard_test.app */,
+				AAB68DCD2D8A9EA10054F973 /* sbm_smart_storyboard_testTests.xctest */,
+				AAB68DD72D8A9EA10054F973 /* sbm_smart_storyboard_testUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAB68DB62D8A9E9F0054F973 /* sbm_smart_storyboard_test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAB68DE02D8A9EA10054F973 /* Build configuration list for PBXNativeTarget "sbm_smart_storyboard_test" */;
+			buildPhases = (
+				AAB68DB32D8A9E9F0054F973 /* Sources */,
+				AAB68DB42D8A9E9F0054F973 /* Frameworks */,
+				AAB68DB52D8A9E9F0054F973 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				AAB68DB92D8A9E9F0054F973 /* sbm_smart_storyboard_test */,
+			);
+			name = sbm_smart_storyboard_test;
+			packageProductDependencies = (
+			);
+			productName = sbm_smart_storyboard_test;
+			productReference = AAB68DB72D8A9E9F0054F973 /* sbm_smart_storyboard_test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AAB68DCC2D8A9EA10054F973 /* sbm_smart_storyboard_testTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAB68DE52D8A9EA10054F973 /* Build configuration list for PBXNativeTarget "sbm_smart_storyboard_testTests" */;
+			buildPhases = (
+				AAB68DC92D8A9EA10054F973 /* Sources */,
+				AAB68DCA2D8A9EA10054F973 /* Frameworks */,
+				AAB68DCB2D8A9EA10054F973 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAB68DCF2D8A9EA10054F973 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AAB68DD02D8A9EA10054F973 /* sbm_smart_storyboard_testTests */,
+			);
+			name = sbm_smart_storyboard_testTests;
+			packageProductDependencies = (
+			);
+			productName = sbm_smart_storyboard_testTests;
+			productReference = AAB68DCD2D8A9EA10054F973 /* sbm_smart_storyboard_testTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AAB68DD62D8A9EA10054F973 /* sbm_smart_storyboard_testUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAB68DE82D8A9EA10054F973 /* Build configuration list for PBXNativeTarget "sbm_smart_storyboard_testUITests" */;
+			buildPhases = (
+				AAB68DD32D8A9EA10054F973 /* Sources */,
+				AAB68DD42D8A9EA10054F973 /* Frameworks */,
+				AAB68DD52D8A9EA10054F973 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAB68DD92D8A9EA10054F973 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AAB68DDA2D8A9EA10054F973 /* sbm_smart_storyboard_testUITests */,
+			);
+			name = sbm_smart_storyboard_testUITests;
+			packageProductDependencies = (
+			);
+			productName = sbm_smart_storyboard_testUITests;
+			productReference = AAB68DD72D8A9EA10054F973 /* sbm_smart_storyboard_testUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAB68DAF2D8A9E9F0054F973 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					AAB68DB62D8A9E9F0054F973 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					AAB68DCC2D8A9EA10054F973 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = AAB68DB62D8A9E9F0054F973;
+					};
+					AAB68DD62D8A9EA10054F973 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = AAB68DB62D8A9E9F0054F973;
+					};
+				};
+			};
+			buildConfigurationList = AAB68DB22D8A9E9F0054F973 /* Build configuration list for PBXProject "sbm_smart_storyboard_test" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAB68DAE2D8A9E9F0054F973;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = AAB68DB82D8A9E9F0054F973 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAB68DB62D8A9E9F0054F973 /* sbm_smart_storyboard_test */,
+				AAB68DCC2D8A9EA10054F973 /* sbm_smart_storyboard_testTests */,
+				AAB68DD62D8A9EA10054F973 /* sbm_smart_storyboard_testUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAB68DB52D8A9E9F0054F973 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAB68DCB2D8A9EA10054F973 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAB68DD52D8A9EA10054F973 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAB68DB32D8A9E9F0054F973 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAB68DC92D8A9EA10054F973 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAB68DD32D8A9EA10054F973 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AAB68DCF2D8A9EA10054F973 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAB68DB62D8A9E9F0054F973 /* sbm_smart_storyboard_test */;
+			targetProxy = AAB68DCE2D8A9EA10054F973 /* PBXContainerItemProxy */;
+		};
+		AAB68DD92D8A9EA10054F973 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAB68DB62D8A9E9F0054F973 /* sbm_smart_storyboard_test */;
+			targetProxy = AAB68DD82D8A9EA10054F973 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AAB68DE12D8A9EA10054F973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = sbm_smart_storyboard_test/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.sbm-smart-storyboard-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAB68DE22D8A9EA10054F973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = sbm_smart_storyboard_test/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.sbm-smart-storyboard-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AAB68DE32D8A9EA10054F973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AAB68DE42D8A9EA10054F973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAB68DE62D8A9EA10054F973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.sbm-smart-storyboard-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sbm_smart_storyboard_test.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sbm_smart_storyboard_test";
+			};
+			name = Debug;
+		};
+		AAB68DE72D8A9EA10054F973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.sbm-smart-storyboard-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sbm_smart_storyboard_test.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sbm_smart_storyboard_test";
+			};
+			name = Release;
+		};
+		AAB68DE92D8A9EA10054F973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.sbm-smart-storyboard-testUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = sbm_smart_storyboard_test;
+			};
+			name = Debug;
+		};
+		AAB68DEA2D8A9EA10054F973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.sbm-smart-storyboard-testUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = sbm_smart_storyboard_test;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAB68DB22D8A9E9F0054F973 /* Build configuration list for PBXProject "sbm_smart_storyboard_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAB68DE32D8A9EA10054F973 /* Debug */,
+				AAB68DE42D8A9EA10054F973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAB68DE02D8A9EA10054F973 /* Build configuration list for PBXNativeTarget "sbm_smart_storyboard_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAB68DE12D8A9EA10054F973 /* Debug */,
+				AAB68DE22D8A9EA10054F973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAB68DE52D8A9EA10054F973 /* Build configuration list for PBXNativeTarget "sbm_smart_storyboard_testTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAB68DE62D8A9EA10054F973 /* Debug */,
+				AAB68DE72D8A9EA10054F973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAB68DE82D8A9EA10054F973 /* Build configuration list for PBXNativeTarget "sbm_smart_storyboard_testUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAB68DE92D8A9EA10054F973 /* Debug */,
+				AAB68DEA2D8A9EA10054F973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAB68DAF2D8A9E9F0054F973 /* Project object */;
+}
