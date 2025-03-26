@@ -11,7 +11,7 @@ class Helpers {
             if let token = await getToken() {
                 do {
                     print("Navigation controller in helper: \(String(describing: viewController.navigationController))")
-                    try await library.open(from: viewController,
+                    try await library.open(on: viewController,
                                          token: token,
                                          module: "/banking/sbm/credit_card/MWK") { action in
                         switch action {

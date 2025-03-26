@@ -11,31 +11,57 @@ import UIKit
 class HomeViewController: UIViewController {
     
     private var titleLabel: UILabel!
+    @IBOutlet weak var back: UIButton? // Make this optional
+    private var programmaticBackButton: UIButton? // Add this for programmatic creation
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupNavigation()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("Navigated to HomeView from deep link")
-    }
-     private func setupNavigation() {
-        title = "Home"
-        // Even if coming from deep link, create a dummy view controller for back navigation
-        if navigationController?.viewControllers.count == 1 {
-            let dummyVC = UIViewController()
-            navigationController?.viewControllers.insert(dummyVC, at: 0)
+        
+        // Print navigation stack when HomeViewController loads
+        if let navigationController = self.navigationController {
+            print("  HomeViewController navigation stack:")
+            navigationController.viewControllers.enumerated().forEach { index, vc in
+                print("  \(index): \(type(of: vc))")
+            }
+        } else {
+            print("  HomeViewController has no navigation controller")
         }
     }
+    
+    private func setupNavigation() {
+        title = "Home"
+        
+        if back == nil {
+            // Create programmatic back button if IBOutlet is nil
+            let backButton = UIButton(type: .system)
+            backButton.setTitle("Back", for: .normal)
+            backButton.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(backButton)
+            
+            // Setup constraints
+            NSLayoutConstraint.activate([
+                backButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+                backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+            ])
+            
+            backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+            self.programmaticBackButton = backButton
+        } else {
+            // Use storyboard back button
+            back?.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        }
+        
+        navigationItem.hidesBackButton = false
+    }
+
     
     private func setupUI() {
         // Create label
         titleLabel = UILabel()
         titleLabel.text = "Hello World"
-        titleLabel.font = UIFont.systemFont(ofSize: 34, weight: .bold)  
+        titleLabel.font = UIFont.systemFont(ofSize: 34, weight: .bold)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         // Add to view hierarchy
@@ -52,5 +78,17 @@ class HomeViewController: UIViewController {
         
         // Background color
         view.backgroundColor = .systemBackground
+    }
+    
+    @objc private func backButtonTapped() {
+        print("⬅️ Back button tapped in HomeViewController")
+        if let navigationController = self.navigationController {
+            print("Current navigation stack before pop:")
+            navigationController.viewControllers.enumerated().forEach { index, vc in
+                print("  \(index): \(type(of: vc))")
+            }
+            
+             navigationController.popViewController(animated: true)
+        }
     }
 }

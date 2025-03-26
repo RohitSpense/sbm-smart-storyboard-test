@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
             fatalError("Unable to instantiate LoginViewController")
         }
+        let screenMap = [
+                "home": "HomeViewController",
+                "login": "LoginViewController"
+            ]
         
         navigationController = UINavigationController(rootViewController: loginVC)
         window?.rootViewController = navigationController
@@ -28,7 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PartnerLibrarySingleton.shared.initialize(
             withHostName: EnvManager.partnerHostName,
             deviceBindingEnabled: false,
-            whitelistedUrls: ["api.razorpay.com", "sbmkycuat.esbeeyem.com", "m2pfintech.com"]
+            whitelistedUrls: ["api.razorpay.com", "sbmkycuat.esbeeyem.com", "m2pfintech.com"],
+            deeplinkScreenMap: screenMap
         )
         
         // Then set the app's navigation controller
