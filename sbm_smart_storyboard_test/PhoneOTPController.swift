@@ -17,7 +17,7 @@ class PhoneOTPController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var otpLabel: UILabel!
     @IBOutlet weak var resendButton: UIButton!
     @IBOutlet weak var resendStackView: UIStackView!
-    @IBOutlet weak var timerLabel: UILabel!
+//    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var continueButton: UIButton!
     
     // MARK: - Properties
@@ -58,7 +58,7 @@ class PhoneOTPController: UIViewController, UITextFieldDelegate {
     updateContinueButtonState()
     
     // Timer
-    startTimer()
+//    startTimer()
     
     // Initially hide resend stack
     resendStackView.isHidden = true
@@ -83,7 +83,7 @@ class PhoneOTPController: UIViewController, UITextFieldDelegate {
     }
     
     private func setupNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
         
         // For handling pasted text
         NotificationCenter.default.addObserver(
@@ -102,8 +102,8 @@ class PhoneOTPController: UIViewController, UITextFieldDelegate {
     @IBAction func resendCodeTapped(_ sender: UIButton) {
         resendOTP()
         timeRemaining = 60
-        startTimer()
-        updateResendButtonState(enabled: false)
+//        startTimer()
+//        updateResendButtonState(enabled: false)
     }
     
     @IBAction func continueButtonTapped(_ sender: UIButton) {
@@ -113,27 +113,27 @@ class PhoneOTPController: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: - Helper Methods
-    private func startTimer() {
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
-    }
+//    private func startTimer() {
+//        timer?.invalidate()
+//        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+//    }
     
-    @objc private func updateTimer() {
-        if timeRemaining > 0 {
-            timeRemaining -= 1
-            timerLabel.text = "(\(timeRemaining))"
-            updateResendButtonState(enabled: false)
-        } else {
-            timer?.invalidate()
-            updateResendButtonState(enabled: true)
-        }
-    }
+//    @objc private func updateTimer() {
+//        if timeRemaining > 0 {
+//            timeRemaining -= 1
+//            timerLabel.text = "(\(timeRemaining))"
+//            updateResendButtonState(enabled: false)
+//        } else {
+//            timer?.invalidate()
+//            updateResendButtonState(enabled: true)
+//        }
+//    }
     
-    private func updateResendButtonState(enabled: Bool) {
-        resendButton.isEnabled = enabled
-        resendButton.setTitleColor(enabled ? UIColor(named: "sbmPrimary") : UIColor(named: "sbmPrimary30"), for: .normal)
-        timerLabel.isHidden = enabled
-    }
+//    private func updateResendButtonState(enabled: Bool) {
+//        resendButton.isEnabled = enabled
+//        resendButton.setTitleColor(enabled ? UIColor(named: "sbmPrimary") : UIColor(named: "sbmPrimary30"), for: .normal)
+//        timerLabel.isHidden = enabled
+//    }
     
     private func updateContinueButtonState() {
         let allFields = [otpTextField1, otpTextField2, otpTextField3, otpTextField4, otpTextField5, otpTextField6]
@@ -176,11 +176,11 @@ class PhoneOTPController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @objc private func appMovedToForeground() {
-        if timeRemaining <= 0 {
-            updateResendButtonState(enabled: true)
-        }
-    }
+//    @objc private func appMovedToForeground() {
+//        if timeRemaining <= 0 {
+//            updateResendButtonState(enabled: true)
+//        }
+//    }
     
     @objc private func handlePasteboardChange() {
         if let pasteboardString = UIPasteboard.general.string, pasteboardString.count >= 6 {
@@ -381,6 +381,8 @@ class PhoneOTPController: UIViewController, UITextFieldDelegate {
             UserDefaults.standard.setValue(true, forKey: "is_logged_in")
             Task {
                 await NavigationHelper.shared.openSBMLibrary(from: self)
+//                await Helpers().openSBMLibrary(from: self)
+//
             }
         } else {
             goToEmailVerification()
@@ -400,7 +402,8 @@ private func checkForProfileSetup(response: [String: Any]) async {
            // self?.navigationController?.popViewController(animated: true)
         }
         // Pass self as the viewController parameter
-        await Helpers().openSBMLibrary(from: self)
+//        await Helpers().openSBMLibrary(from: self)
+        await NavigationHelper.shared.openSBMLibrary(from: self)
     } else {
         goToProfileSetup()
     }

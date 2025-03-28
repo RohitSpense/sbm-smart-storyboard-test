@@ -1,0 +1,15 @@
+{
+  "originHash" : "b36fc001b9eb791886dacbd81c351e3f8726308865e60daf90181ab6ae8d085b",
+  "pins" : [
+    {
+      "identity" : "sbm-library-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sbmbank-co-in/sbm-library-ios",
+      "state" : {
+        "revision" : "f3605273e2f3188603199ba6323cbf2b9eb75686",
+        "version" : "1.0.10"
+      }
+    }
+  ],
+  "version" : 3
+}

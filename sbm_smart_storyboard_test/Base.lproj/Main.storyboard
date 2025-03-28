@@ -93,6 +93,7 @@
                     <navigationItem key="navigationItem" id="XYj-VN-kWT"/>
                     <connections>
                         <outlet property="bottomLogoImageView" destination="hEL-Dl-5Lz" id="ETL-ya-kKa"/>
+                        <outlet property="loginButton" destination="A10-XA-hUg" id="UlX-GE-F1K"/>
                         <outlet property="logoImageView" destination="058-kF-NjZ" id="xJO-Fe-F3S"/>
                         <outlet property="notificationCheckbox" destination="pAi-Rp-rfM" id="FN4-mO-OOa"/>
                         <outlet property="notificationLabel" destination="6Ek-3q-tUh" id="ElX-Ol-8PN"/>
@@ -266,13 +267,13 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -134,7 +134,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             showAlert(message: "You must agree to all terms and policies to proceed")
         } else {
             print("✅ Validation passed, performing segue")
-            performSegue(withIdentifier: "goToOTP", sender: self)
+//            performSegue(withIdentifier: "goToOTP", sender: self)
+            let otpVC = PhoneOTPController()
+            let phoneNumber = self.phoneTextField.text ?? ""
+            UserDefaults.standard.set("+91" + phoneNumber, forKey: "phoneNumber")
+            otpVC.phone = "+91" + phoneNumber
+            NavigationHelper.shared.push(otpVC)
         }
     }
 
