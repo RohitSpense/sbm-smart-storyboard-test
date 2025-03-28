@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="bXW-Gs-zWi">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="Wgf-WK-Gd9" customClass="LoginViewController" customModule="sbm_smart_storyboard_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="Wgf-WK-Gd9" customClass="LoginViewController" customModule="sbm_smart_storyboard_test" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cqW-cd-9kk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,11 +64,15 @@
                                 <rect key="frame" x="81" y="690" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A10-XA-hUg">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A10-XA-hUg" customClass="goToOTP" customModule="sbm_smart_storyboard_test">
                                 <rect key="frame" x="111" y="497" width="169" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="goToOTP"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="LOGIN"/>
+                                <connections>
+                                    <segue destination="ZcA-yW-EIS" kind="show" identifier="goToOTP" id="8BA-dC-bAG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmA-bC-e7f">
                                 <rect key="frame" x="39" y="438" width="112" height="35"/>
@@ -81,9 +85,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="deeplink"/>
-                                <connections>
-                                    <segue destination="jPH-Qq-6R9" kind="show" id="62B-BM-HhO"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RXU-VZ-9o7"/>
@@ -92,7 +93,6 @@
                     <navigationItem key="navigationItem" id="XYj-VN-kWT"/>
                     <connections>
                         <outlet property="bottomLogoImageView" destination="hEL-Dl-5Lz" id="ETL-ya-kKa"/>
-                        <outlet property="loginButton" destination="A10-XA-hUg" id="T58-Sd-ZUQ"/>
                         <outlet property="logoImageView" destination="058-kF-NjZ" id="xJO-Fe-F3S"/>
                         <outlet property="notificationCheckbox" destination="pAi-Rp-rfM" id="FN4-mO-OOa"/>
                         <outlet property="notificationLabel" destination="6Ek-3q-tUh" id="ElX-Ol-8PN"/>
@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="816.03053435114498" y="40.845070422535215"/>
         </scene>
-        <!--PhoneOTP Controller-->
+        <!--PhoneOTPController-->
         <scene sceneID="nVq-iH-gYt">
             <objects>
-                <viewController storyboardIdentifier="PhoneOTPController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZcA-yW-EIS" customClass="PhoneOTPController" customModule="sbm_smart_storyboard_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhoneOTPController" title="PhoneOTPController" id="ZcA-yW-EIS" customClass="PhoneOTPController" customModule="sbm_smart_storyboard_test" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ElX-ub-X9X">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,13 +157,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKA-Rt-kjp">
-                                <rect key="frame" x="69" y="391" width="55" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ch2-ub-ZNS">
                                 <rect key="frame" x="55" y="579" width="200" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -188,9 +181,16 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Resend OTP"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Thi-zs-8Uw">
+                                <rect key="frame" x="267" y="730" width="68" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="BACK"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tCE-q3-ujS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" hint="PhoneOTPController" identifier="PhoneOTPController" label="PhoneOTPController"/>
                     </view>
                     <navigationItem key="navigationItem" id="11O-lv-60h"/>
                     <connections>
@@ -204,7 +204,6 @@
                         <outlet property="otpTextField6" destination="TDa-Cw-md9" id="gfZ-Eh-SHG"/>
                         <outlet property="resendButton" destination="y5J-HJ-P3C" id="ckU-Cc-Zrh"/>
                         <outlet property="resendStackView" destination="ch2-ub-ZNS" id="Gfn-dF-Wna"/>
-                        <outlet property="timerLabel" destination="vKA-Rt-kjp" id="MFf-5P-7oc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YpQ-eV-VV2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

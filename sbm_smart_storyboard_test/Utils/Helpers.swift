@@ -28,7 +28,7 @@ class Helpers {
             }
         }
     
-    private func getToken() async -> String? {
+    public func getToken() async -> String? {
         print("HERE ")
         do {
             let response = try await NetworkRequest.shared.makeRequest(url: URL(string: ServiceNames.USER_TOKEN)!, method: "GET")

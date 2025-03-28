@@ -13,31 +13,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var navigationController: UINavigationController!  // Make this non-optional
         
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        print("📱 Application launching")
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         guard let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
+            print("❌ Failed to instantiate LoginViewController")
             fatalError("Unable to instantiate LoginViewController")
         }
-        let screenMap = [
-                "home": "HomeViewController",
-                "login": "LoginViewController"
-            ]
+        print("✅ LoginViewController instantiated")
         
         navigationController = UINavigationController(rootViewController: loginVC)
         window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
         
-        // Initialize Partner Library first
+        NavigationHelper.shared.setupMainNavigationController(navigationController)
+        print("✅ NavigationHelper setup complete")
+        // Initialize Partner Library
         PartnerLibrarySingleton.shared.initialize(
             withHostName: EnvManager.partnerHostName,
             deviceBindingEnabled: false,
             whitelistedUrls: ["api.razorpay.com", "sbmkycuat.esbeeyem.com", "m2pfintech.com"]
-           // deeplinkScreenMap: screenMap
         )
-        
-        // Then set the app's navigation controller
-        PartnerLibrarySingleton.shared.instance.setParentNavigationController(navigationController)
         
         return true
     }

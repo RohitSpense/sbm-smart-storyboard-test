@@ -123,17 +123,33 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         termsCheckbox.isSelected = termsChecked
         updateLoginButtonState()
     }
-    
-    @objc public func loginButtonTapped() {
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        print("🔵 Login button tapped")
+        
         if !isValidPhoneNumber(phoneTextField.text ?? "") {
+            print("❌ Invalid phone number")
             showAlert(message: "Please enter a valid phone number.")
         } else if !termsChecked {
+            print("❌ Terms not checked")
             showAlert(message: "You must agree to all terms and policies to proceed")
         } else {
-            navigateToOtpScreen()
+            print("✅ Validation passed, performing segue")
+            performSegue(withIdentifier: "goToOTP", sender: self)
         }
     }
-    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("🔄 Preparing for segue: \(segue.identifier ?? "unknown")")
+        
+        if segue.identifier == "goToOTP",
+           let otpVC = segue.destination as? PhoneOTPController {
+            print("✅ Successfully cast destination to PhoneOTPController")
+            let phoneNumber = self.phoneTextField.text ?? ""
+            UserDefaults.standard.set("+91" + phoneNumber, forKey: "phoneNumber")
+            otpVC.phone = "+91" + phoneNumber
+            print("📞 Set phone number: +91\(phoneNumber)")
+        }
+    }
     @objc public func handleTermsTap(_ gesture: UITapGestureRecognizer) {
         let termsText = "I agree to SBM terms of use and privacy policy"
         let termsRange = (termsText as NSString).range(of: "terms of use")
@@ -171,15 +187,35 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         present(alert, animated: true)
     }
     
-   public func navigateToOtpScreen() {
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    if let otpVC = storyboard.instantiateViewController(withIdentifier: "PhoneOTPController") as? PhoneOTPController {
-        let phoneNumber = phoneTextField.text ?? ""
-        UserDefaults.standard.set("+91" + phoneNumber, forKey: "phoneNumber") // Save phone number
-        otpVC.phone = "+91" + phoneNumber // Set phone number directly
-        navigationController?.pushViewController(otpVC, animated: true)
-    }
-}
+    // In LoginViewController.swift
+//    public func navigateToOtpScreen() {
+//        print("🚀 Starting navigation to OTP screen")
+//        
+//        NavigationHelper.shared.navigateToViewController(
+//            withIdentifier: "PhoneOTPController",
+//            animated: true,
+//            setup: { [weak self] viewController in
+//                guard let self = self else {
+//                    print("❌ Self is nil in setup closure")
+//                    return
+//                }
+//                
+//                if let otpVC = viewController as? PhoneOTPController {
+//                    print("✅ Successfully cast to PhoneOTPController")
+//                    let phoneNumber = self.phoneTextField.text ?? ""
+//                    UserDefaults.standard.set("+91" + phoneNumber, forKey: "phoneNumber")
+//                    otpVC.phone = "+91" + phoneNumber
+//                    print("📞 Set phone number: +91\(phoneNumber)")
+//                    print("🔍 OTP View Controller state: \(otpVC)")
+//                } else {
+//                    print("❌ Failed to cast viewController to PhoneOTPController")
+//                    print("🔍 Actual type: \(type(of: viewController))")
+//                }
+//            }
+//        ) {
+//            print("✅ Navigation completed")
+//        }
+//    }
     
     // MARK: - UITextFieldDelegate
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

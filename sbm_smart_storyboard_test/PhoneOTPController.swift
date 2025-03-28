@@ -21,7 +21,7 @@ class PhoneOTPController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var continueButton: UIButton!
     
     // MARK: - Properties
-     var phone: String = ""
+     public var phone: String = ""
      var verifyCode: String = ""
      var timeRemaining = 60
      var timer: Timer?
@@ -32,6 +32,7 @@ class PhoneOTPController: UIViewController, UITextFieldDelegate {
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("📱 PhoneOTPController viewDidLoad called")
         setupUI()
         setupTextFields()
         setupNotifications()
@@ -95,7 +96,7 @@ class PhoneOTPController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Actions
     @IBAction func backButtonTapped(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
+        NavigationHelper.shared.popViewController()
     }
     
     @IBAction func resendCodeTapped(_ sender: UIButton) {
@@ -370,24 +371,21 @@ class PhoneOTPController: UIViewController, UITextFieldDelegate {
     }
     
     private func checkForNewUser(response: [String: Any]) {
-    guard let user = response["user"] as? [String: Any],
-          let email = user["email"] as? String else {
-        goToEmailVerification()
-        return
+        guard let user = response["user"] as? [String: Any],
+              let email = user["email"] as? String else {
+            goToEmailVerification()
+            return
+        }
+        
+        if !email.isEmpty {
+            UserDefaults.standard.setValue(true, forKey: "is_logged_in")
+            Task {
+                await NavigationHelper.shared.openSBMLibrary(from: self)
+            }
+        } else {
+            goToEmailVerification()
+        }
     }
-    
-    if !email.isEmpty {
-        UserDefaults.standard.setValue(true, forKey: "is_logged_in")
-       // self.navigationController?.popViewController(animated: true)
-        print("Navigation controller before opening library: \(String(describing: navigationController))")
-                Task {
-                    await Helpers().openSBMLibrary(from: self)
-                }
-    } else {
-        goToEmailVerification()
-    }
-}
-
 private func checkForProfileSetup(response: [String: Any]) async {
     guard let user = response["user"] as? [String: Any],
           let attributes = user["attributes"] as? [String: Any],

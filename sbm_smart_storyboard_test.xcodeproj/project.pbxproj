@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AAC34A232D917F210057E522 /* sbm-library-ios in Frameworks */ = {isa = PBXBuildFile; productRef = AAC34A222D917F210057E522 /* sbm-library-ios */; };
-		AAF864B22D8B18DC00BFF493 /* sbm-library-ios in Frameworks */ = {isa = PBXBuildFile; productRef = AAF864B12D8B18DC00BFF493 /* sbm-library-ios */; };
+		AA706A162D96B5D500F83372 /* sbm-library-ios in Frameworks */ = {isa = PBXBuildFile; productRef = AA706A152D96B5D500F83372 /* sbm-library-ios */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAF864B22D8B18DC00BFF493 /* sbm-library-ios in Frameworks */,
-				AAC34A232D917F210057E522 /* sbm-library-ios in Frameworks */,
+				AA706A162D96B5D500F83372 /* sbm-library-ios in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,8 +138,7 @@
 			);
 			name = sbm_smart_storyboard_test;
 			packageProductDependencies = (
-				AAF864B12D8B18DC00BFF493 /* sbm-library-ios */,
-				AAC34A222D917F210057E522 /* sbm-library-ios */,
+				AA706A152D96B5D500F83372 /* sbm-library-ios */,
 			);
 			productName = sbm_smart_storyboard_test;
 			productReference = AAB68DB72D8A9E9F0054F973 /* sbm_smart_storyboard_test.app */;
@@ -226,7 +223,7 @@
 			mainGroup = AAB68DAE2D8A9E9F0054F973;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				AAC34A212D917F210057E522 /* XCLocalSwiftPackageReference "../../StudioProjects/sbm-library-ios" */,
+				AA706A142D96B5D500F83372 /* XCLocalSwiftPackageReference "../../StudioProjects/sbm-library-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AAB68DB82D8A9E9F0054F973 /* Products */;
@@ -337,7 +334,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SHCN78VPL3;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sbm_smart_storyboard_test/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -587,18 +584,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		AAC34A212D917F210057E522 /* XCLocalSwiftPackageReference "../../StudioProjects/sbm-library-ios" */ = {
+		AA706A142D96B5D500F83372 /* XCLocalSwiftPackageReference "../../StudioProjects/sbm-library-ios" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "../../StudioProjects/sbm-library-ios";
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AAC34A222D917F210057E522 /* sbm-library-ios */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = "sbm-library-ios";
-		};
-		AAF864B12D8B18DC00BFF493 /* sbm-library-ios */ = {
+		AA706A152D96B5D500F83372 /* sbm-library-ios */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = "sbm-library-ios";
 		};
