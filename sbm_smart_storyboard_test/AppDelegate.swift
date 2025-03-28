@@ -32,8 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PartnerLibrarySingleton.shared.initialize(
             withHostName: EnvManager.partnerHostName,
             deviceBindingEnabled: false,
-            whitelistedUrls: ["api.razorpay.com", "sbmkycuat.esbeeyem.com", "m2pfintech.com"],
-            deeplinkScreenMap: screenMap
+            whitelistedUrls: ["api.razorpay.com", "sbmkycuat.esbeeyem.com", "m2pfintech.com"]
+           // deeplinkScreenMap: screenMap
         )
         
         // Then set the app's navigation controller

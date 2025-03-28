@@ -11,6 +11,7 @@ class Helpers {
             if let token = await getToken() {
                 do {
                     print("Navigation controller in helper: \(String(describing: viewController.navigationController))")
+                    print("TOKEN ******* \(token)")
                     try await library.open(on: viewController,
                                          token: token,
                                          module: "/banking/sbm/credit_card/MWK") { action in
@@ -28,6 +29,7 @@ class Helpers {
         }
     
     private func getToken() async -> String? {
+        print("HERE ")
         do {
             let response = try await NetworkRequest.shared.makeRequest(url: URL(string: ServiceNames.USER_TOKEN)!, method: "GET")
             return response["token"] as? String
