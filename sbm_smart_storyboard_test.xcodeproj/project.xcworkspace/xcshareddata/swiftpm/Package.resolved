@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sbmbank-co-in/sbm-library-ios",
       "state" : {
-        "revision" : "f3605273e2f3188603199ba6323cbf2b9eb75686",
-        "version" : "1.0.10"
+        "revision" : "86acc662ed083bd993b74043f8a691904af557a4",
+        "version" : "1.1.5"
       }
     }
   ],

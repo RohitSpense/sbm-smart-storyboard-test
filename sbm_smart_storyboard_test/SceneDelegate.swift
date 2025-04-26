@@ -41,16 +41,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.rootViewController = navigationController
             self.window = window
             window.makeKeyAndVisible()
-            
-            // Initialize Partner Library
-            PartnerLibrarySingleton.shared.initialize(
-                withHostName: EnvManager.partnerHostName,
-                deviceBindingEnabled: false,
-                whitelistedUrls: ["api.razorpay.com", "sbmkycuat.esbeeyem.com", "m2pfintech.com"]
-            )
-            
-            // Set navigation controller for Partner Library
-            PartnerLibrarySingleton.shared.instance.setParentNavigationController(navigationController)
         }
     }
     

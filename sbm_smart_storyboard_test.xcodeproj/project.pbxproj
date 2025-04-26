@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B2DD9252D9732CA005FFDCF /* sbm-library-ios in Frameworks */ = {isa = PBXBuildFile; productRef = 8B2DD9242D9732CA005FFDCF /* sbm-library-ios */; };
+		8B2371652DB7BBA100CBACC9 /* sbm-library-ios in Frameworks */ = {isa = PBXBuildFile; productRef = 8B2371642DB7BBA100CBACC9 /* sbm-library-ios */; };
+		8B83AF522DBD1A9D00980D35 /* sbm-library-ios in Frameworks */ = {isa = PBXBuildFile; productRef = 8B83AF512DBD1A9D00980D35 /* sbm-library-ios */; };
+		8B83AF552DBD2EC400980D35 /* sbm-library-ios in Frameworks */ = {isa = PBXBuildFile; productRef = 8B83AF542DBD2EC400980D35 /* sbm-library-ios */; };
 		AA706A162D96B5D500F83372 /* sbm-library-ios in Frameworks */ = {isa = PBXBuildFile; productRef = AA706A152D96B5D500F83372 /* sbm-library-ios */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +73,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA706A162D96B5D500F83372 /* sbm-library-ios in Frameworks */,
-				8B2DD9252D9732CA005FFDCF /* sbm-library-ios in Frameworks */,
+				8B2371652DB7BBA100CBACC9 /* sbm-library-ios in Frameworks */,
+				8B83AF522DBD1A9D00980D35 /* sbm-library-ios in Frameworks */,
+				8B83AF552DBD2EC400980D35 /* sbm-library-ios in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +145,9 @@
 			name = sbm_smart_storyboard_test;
 			packageProductDependencies = (
 				AA706A152D96B5D500F83372 /* sbm-library-ios */,
-				8B2DD9242D9732CA005FFDCF /* sbm-library-ios */,
+				8B2371642DB7BBA100CBACC9 /* sbm-library-ios */,
+				8B83AF512DBD1A9D00980D35 /* sbm-library-ios */,
+				8B83AF542DBD2EC400980D35 /* sbm-library-ios */,
 			);
 			productName = sbm_smart_storyboard_test;
 			productReference = AAB68DB72D8A9E9F0054F973 /* sbm_smart_storyboard_test.app */;
@@ -226,7 +232,7 @@
 			mainGroup = AAB68DAE2D8A9E9F0054F973;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				8B2DD9232D9732CA005FFDCF /* XCRemoteSwiftPackageReference "sbm-library-ios" */,
+				8B83AF532DBD2EC400980D35 /* XCRemoteSwiftPackageReference "sbm-library-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AAB68DB82D8A9E9F0054F973 /* Products */;
@@ -587,7 +593,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8B2DD9232D9732CA005FFDCF /* XCRemoteSwiftPackageReference "sbm-library-ios" */ = {
+		8B83AF532DBD2EC400980D35 /* XCRemoteSwiftPackageReference "sbm-library-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sbmbank-co-in/sbm-library-ios";
 			requirement = {
@@ -598,9 +604,17 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8B2DD9242D9732CA005FFDCF /* sbm-library-ios */ = {
+		8B2371642DB7BBA100CBACC9 /* sbm-library-ios */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8B2DD9232D9732CA005FFDCF /* XCRemoteSwiftPackageReference "sbm-library-ios" */;
+			productName = "sbm-library-ios";
+		};
+		8B83AF512DBD1A9D00980D35 /* sbm-library-ios */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "sbm-library-ios";
+		};
+		8B83AF542DBD2EC400980D35 /* sbm-library-ios */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B83AF532DBD2EC400980D35 /* XCRemoteSwiftPackageReference "sbm-library-ios" */;
 			productName = "sbm-library-ios";
 		};
 		AA706A152D96B5D500F83372 /* sbm-library-ios */ = {

@@ -30,11 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NavigationHelper.shared.setupMainNavigationController(navigationController)
         print("✅ NavigationHelper setup complete")
         // Initialize Partner Library
-        PartnerLibrarySingleton.shared.initialize(
-            withHostName: EnvManager.partnerHostName,
-            deviceBindingEnabled: false,
-            whitelistedUrls: ["api.razorpay.com", "sbmkycuat.esbeeyem.com", "m2pfintech.com"]
-        )
         
         return true
     }

@@ -108,13 +108,20 @@ class NavigationHelper {
             return
         }
         
-        // Ensure PartnerLibrarySingleton is aware of our navigation controller
-        PartnerLibrarySingleton.shared.instance.setParentNavigationController(navController)
+        PartnerLibrarySingleton.shared.initialize(
+            withHostName: EnvManager.partnerHostName,
+            deviceBindingEnabled: false,
+            whitelistedUrls: ["api.razorpay.com", "sbmkycuat.esbeeyem.com", "m2pfintech.com"]
+        )
         
         // Use Task to handle async call
         Task {
             if let token = await Helpers().getToken() {
                 do {
+                    // Initialize Partner Library
+                    
+                    // Set navigation controller for Partner Library
+                    PartnerLibrarySingleton.shared.instance.setParentNavigationController(navController)
                     try await PartnerLibrarySingleton.shared.instance.open(
                         on: viewController,
                         token: token,

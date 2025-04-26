@@ -9,7 +9,7 @@ import Foundation
 
 struct EnvManager {
     static let hostName = "https://sbmapp.uat.spense.money"
-    static let partnerHostName = "https://sbmsmartbankinguat.esbeeyem.com:9443"
+    static let partnerHostName = "https://smtplatform.sbmbank.co.in"
     static var bank = "sbm"
     static var partner = "sbm"
 }

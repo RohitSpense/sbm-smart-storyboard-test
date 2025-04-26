@@ -12,7 +12,7 @@ class Helpers {
                 do {
                     print("Navigation controller in helper: \(String(describing: viewController.navigationController))")
                     print("TOKEN ******* \(token)")
-                    try await library.open(on: viewController,
+                    try await PartnerLibrarySingleton.shared.instance.open(on: viewController,
                                          token: token,
                                          module: "/banking/sbm/credit_card/MWK") { action in
                         switch action {
